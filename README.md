@@ -1,9 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Remembrance Day Website| Noah Whiteson
 
-## Getting Started
+Feel free to fork this project and edit it. Please credit me in your repository. This project remains a tribute to the Canadians who fought for our lives
 
-First, run the development server:
 
+## Next JS stuff
 ```bash
 npm run dev
 # or
