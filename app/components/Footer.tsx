@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">In loving memory of all those who served</p>
-          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Remembrance Memorial • Lest We Forget</p>
+          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Noah Whiteson x Remembrance Day</p>
         </div>
       </div>
     </footer>
