@@ -8,7 +8,7 @@ export default function QuoteSection() {
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white to-transparent pointer-events-none z-20" />
         
         {/* Left Poppy */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px]">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[25vw] h-[25vw] md:w-[40vw] md:h-[40vw] lg:w-[50vw] lg:h-[50vw] max-w-[600px] max-h-[600px]">
           <Image
             src="/poppies/poppy.png"
             alt=""
@@ -18,7 +18,7 @@ export default function QuoteSection() {
         </div>
 
         {/* Right Poppy */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px]">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[25vw] h-[25vw] md:w-[40vw] md:h-[40vw] lg:w-[50vw] lg:h-[50vw] max-w-[600px] max-h-[600px]">
           <Image
             src="/poppies/poppy2.png"
             alt=""
