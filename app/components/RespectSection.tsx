@@ -290,6 +290,26 @@ export default function RespectSection() {
             07
           </div>
         </div>
+
+        {/* And 118,000 More */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-center px-20 py-16 bg-white">
+          <div className="text-center max-w-4xl">
+            <h2 className="text-8xl md:text-9xl font-black tracking-tighter mb-12">
+              AND 118,000 MORE
+            </h2>
+            <p className="text-2xl md:text-3xl leading-relaxed text-gray-700 mb-8">
+              Over 118,000 Canadians made the ultimate sacrifice in World War I and World War II.
+            </p>
+            <p className="text-xl leading-relaxed text-gray-600">
+              Each one had a story. Each one had a family. Each one will be remembered.
+            </p>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            08
+          </div>
+        </div>
       </div>
     </section>
   );
