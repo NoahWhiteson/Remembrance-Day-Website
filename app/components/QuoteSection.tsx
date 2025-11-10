@@ -4,6 +4,9 @@ export default function QuoteSection() {
   return (
     <section className="relative min-h-screen bg-white">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+        {/* Bottom fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white to-transparent pointer-events-none z-20" />
+        
         {/* Left Poppy */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px]">
           <Image

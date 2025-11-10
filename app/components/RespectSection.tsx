@@ -26,7 +26,7 @@ export default function RespectSection() {
         scrollTrigger: {
           trigger: container,
           start: 'top top',
-          end: () => `+=${scrollWidth}`,
+          end: () => `+=${scrollWidth * 0.8}`,
           scrub: 1,
           pin: true,
         },
@@ -37,211 +37,257 @@ export default function RespectSection() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden">
+    <section ref={containerRef} className="relative overflow-hidden bg-white">
       <div ref={scrollContainerRef} className="flex w-fit">
-        {/* William Harold McMullen Page */}
-        <div
-          className="relative h-screen flex-shrink-0 flex items-center justify-center px-8 py-8 overflow-hidden"
-          style={{
-            width: 'calc(100vw + 200px)',
-            backgroundImage: 'url(/paper.png)',
-            backgroundSize: '100% 100%',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            fontFamily: 'Georgia, "Times New Roman", Times, serif',
-          }}
-        >
-          <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-white to-transparent pointer-events-none" />
-          
-          <div className="relative max-w-5xl w-full h-full flex flex-col justify-center mx-auto">
-        {/* Newspaper Header */}
-        <div className="text-center mb-1.5 border-b-2 border-double border-black pb-1.5">
-          <div className="relative w-full h-32 flex items-center justify-center">
+        {/* William Harold McMullen */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
             <Image
-              src="/theremembrancetimes.png"
-              alt="The Remembrance Times"
+              src="/people/williamharold.png"
+              alt="William Harold McMullen"
               fill
-              className="object-contain"
-              priority
+              className="object-cover grayscale"
             />
           </div>
-        </div>
 
-        {/* Issue Info */}
-        <div className="flex justify-between text-[10px] mb-1.5 px-1 border-b border-black pb-1">
-          <span>No. 1918</span>
-          <span className="uppercase">Saturday, November 11, 1964</span>
-          <span>Price 6d.</span>
-        </div>
-
-        {/* Main Headline */}
-        <h2 className="text-xl font-black text-center mb-2 tracking-wide border-b border-black pb-1.5">
-          WILLIAM HAROLD McMULLEN
-        </h2>
-
-        {/* Three Column Layout */}
-        <div className="grid grid-cols-3 gap-4">
-          {/* Column 1 */}
-          <div className="space-y-1.5 text-[11px] leading-tight text-justify">
-            <p className="font-bold uppercase text-xs mb-1">
-              Hero's Supreme Sacrifice Honored
-            </p>
-            <p>
-              In the fields of Flanders, where poppies now grow between the crosses, row on row, brave soldiers like William Harold McMullen gave their lives for the freedom we hold dear today.
-            </p>
-            <p>
-              Born to a family of humble means in rural Ontario, William answered the call of duty when his nation needed him most. He stood alongside his brothers in arms, facing unimaginable hardships with unwavering resolve.
-            </p>
-            <p>
-              His letters home spoke of camaraderie, hope, and an unwavering belief in the cause for which he fought. These words remain a testament to his character.
-            </p>
-            <div className="border-t border-black pt-2 mt-3 text-center">
-              <p className="font-black text-base italic">"Lest We Forget"</p>
-              <p className="text-[9px] italic mt-0.5">We will remember them.</p>
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
+              WILLIAM HAROLD McMULLEN
+            </h2>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                William Harold McMullen was a corporal in the military. He died on November 19th, 1944 at the young age of 27.
+              </p>
+              <p className="mb-6">
+                He was the son of John and Mary A. McMullen. His service number was B/89151.
+              </p>
+              <p className="font-medium text-black">
+                May he rest in peace.
+              </p>
             </div>
           </div>
 
-          {/* Column 2 */}
-          <div className="space-y-1.5 text-[11px] leading-tight text-justify">
-            <div className="border-2 border-black p-1 mb-1.5">
-              <div className="relative w-full aspect-[2/3]">
-                <Image
-                  src="/people/williamharold.png"
-                  alt="William Harold McMullen"
-                  fill
-                  className="object-cover grayscale"
-                />
-              </div>
-              <p className="text-center text-[10px] mt-1 font-bold">WILLIAM HAROLD McMULLEN</p>
-              <p className="text-center text-[9px] italic">Fallen Hero of the Great War</p>
-            </div>
-            <p>
-              At the going down of the sun and in the morning, we will remember them. William's sacrifice ensured that future generations could live in peace and freedom.
-            </p>
-            <p>
-              His final letters home spoke of hope for a better world, one where such conflict would never again be necessary.
-            </p>
-          </div>
-
-          {/* Column 3 */}
-          <div className="space-y-1.5 text-[11px] leading-tight text-justify">
-            <p>
-              On this day, we pause to remember not just William, but all those who served and sacrificed. Their memory lives on in the freedoms we enjoy today.
-            </p>
-            <p>
-              The poppy has become the enduring symbol of remembrance, worn close to the heart to honor those who fell.
-            </p>
-            <p>
-              Each year, on the eleventh hour of the eleventh day of the eleventh month, we observe a moment of silence in their memory.
-            </p>
-            <p>
-              "In Flanders fields the poppies blow, between the crosses, row on row." These immortal words by John McCrae capture the solemn beauty and tragedy of the battlefields.
-            </p>
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            01
           </div>
         </div>
-      </div>
-    </div>
 
-        {/* Murray Hoffman Page */}
-        <div
-          className="relative h-screen flex-shrink-0 flex items-center justify-center px-8 py-8 overflow-hidden -ml-[200px]"
-          style={{
-            width: 'calc(100vw + 200px)',
-            backgroundImage: 'url(/paper.png)',
-            backgroundSize: '100% 100%',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            fontFamily: 'Georgia, "Times New Roman", Times, serif',
-          }}
-        >
-          <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-white to-transparent pointer-events-none" />
-          
-          <div className="relative max-w-5xl w-full h-full flex flex-col justify-center mx-auto">
-            {/* Newspaper Header */}
-            <div className="text-center mb-1.5 border-b-2 border-double border-black pb-1.5">
-              <div className="relative w-full h-32 flex items-center justify-center">
-                <Image
-                  src="/theremembrancetimes.png"
-                  alt="The Remembrance Times"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
+        {/* Murray Hoffman */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
+            <Image
+              src="/people/murrayhoffman.png"
+              alt="Lieutenant Murray Hoffman"
+              fill
+              className="object-cover grayscale"
+            />
+          </div>
 
-            {/* Issue Info */}
-            <div className="flex justify-between text-[10px] mb-1.5 px-1 border-b border-black pb-1">
-              <span>No. 1918</span>
-              <span className="uppercase">Saturday, November 11, 1964</span>
-              <span>Price 6d.</span>
-            </div>
-
-            {/* Main Headline */}
-            <h2 className="text-xl font-black text-center mb-2 tracking-wide border-b border-black pb-1.5">
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
               LIEUTENANT MURRAY HOFFMAN
             </h2>
-
-            {/* Three Column Layout */}
-            <div className="grid grid-cols-3 gap-4">
-              {/* Column 1 */}
-              <div className="space-y-1.5 text-[11px] leading-tight text-justify">
-                <p className="font-bold uppercase text-xs mb-1">
-                  Lieutenant's Valor Lives On
-                </p>
-                <p>
-                  Lieutenant Murray Hoffman exemplified the finest qualities of service and sacrifice. His dedication to duty and his fellow soldiers stands as a testament to the courage of those who served.
-                </p>
-                <p>
-                  From the battlefields of Europe to the hearts of those who knew him, Murray's legacy endures. He faced each challenge with determination and grace, never wavering in his commitment to the cause.
-                </p>
-                <p>
-                  His leadership inspired those under his command, and his bravery in the face of adversity earned him the respect of all who served alongside him.
-                </p>
-                <div className="border-t border-black pt-2 mt-3 text-center">
-                  <p className="font-black text-base italic">"Lest We Forget"</p>
-                  <p className="text-[9px] italic mt-0.5">We will remember them.</p>
-                </div>
-              </div>
-
-              {/* Column 2 */}
-              <div className="space-y-1.5 text-[11px] leading-tight text-justify">
-                <div className="border-2 border-black p-1 mb-1.5">
-                  <div className="relative w-full aspect-[2/3]">
-                    <Image
-                      src="/people/murrayhoffman.png"
-                      alt="Lieutenant Murray Hoffman"
-                      fill
-                      className="object-cover grayscale"
-                    />
-                  </div>
-                  <p className="text-center text-[10px] mt-1 font-bold">LIEUTENANT MURRAY HOFFMAN</p>
-                  <p className="text-center text-[9px] italic">Brave Officer of the Great War</p>
-                </div>
-                <p>
-                  The sacrifice of officers like Lieutenant Hoffman ensured that the values of freedom and democracy were preserved for generations to come.
-                </p>
-                <p>
-                  His memory serves as a reminder of the price of peace and the debt we owe to those who gave their all in service to their nation and comrades.
-                </p>
-              </div>
-
-              {/* Column 3 */}
-              <div className="space-y-1.5 text-[11px] leading-tight text-justify">
-                <p>
-                  Today we honor Lieutenant Murray Hoffman and all those who stood with him. Their courage in the face of unimaginable hardship reminds us of the strength of the human spirit.
-                </p>
-                <p>
-                  The stories of these brave men and women continue to inspire new generations to uphold the values for which they fought and died.
-                </p>
-                <p>
-                  As we gather each November to remember, we ensure that their sacrifice was not in vain and that their memory continues to guide us forward.
-                </p>
-                <p>
-                  Lieutenant Hoffman's service represents the countless acts of heroism performed by ordinary people in extraordinary circumstances during the Great War.
-                </p>
-              </div>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                Murray Hoffman was a brave lieutenant in World War 2. He died on December 19, 1944 and was buried in Italy, in the Ravenna War Cemetery.
+              </p>
+              <p className="mb-6">
+                He had many medals of achievement and one was found. We don't have the information of how old he was when he passed away, but he guided his troop valiantly through the war.
+              </p>
+              <p className="font-medium text-black">
+                He will be remembered.
+              </p>
             </div>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            02
+          </div>
+        </div>
+
+        {/* Kenneth Heron */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
+            <Image
+              src="/people/kennetheron.png"
+              alt="Flying Officer Kenneth Heron"
+              fill
+              className="object-cover grayscale"
+            />
+          </div>
+
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
+              KENNETH HERON
+            </h2>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                Kenneth Heron was a Flying Officer in the military. He died on July 25, 1944. At the time he died, he was 22 years old.
+              </p>
+              <p className="mb-6">
+                His parents were Sheldon and Elsie Heron of Toronto, Ontario. His service number was J/25704.
+              </p>
+              <p className="font-medium text-black">
+                Thank you, Mr. Heron.
+              </p>
+            </div>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            03
+          </div>
+        </div>
+
+        {/* Owen McFarlane */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
+            <Image
+              src="/people/owenmcfarlane.png"
+              alt="Lance Sergeant Owen McFarlane"
+              fill
+              className="object-cover grayscale"
+            />
+          </div>
+
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
+              OWEN McFARLANE
+            </h2>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                Bruce McFarlane was a Lance Sergeant at the time of his death in the military. He died on February 26, 1945. We don't have the age of death but any age to die in war is too young.
+              </p>
+              <p className="mb-6">
+                He was the son of John Cowan McFarlane and Myrtle Irene MacFarlane. His service number was B/19543.
+              </p>
+              <p className="font-medium text-black">
+                You will always be remembered.
+              </p>
+            </div>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            04
+          </div>
+        </div>
+
+        {/* Arthur Palmer */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
+            <Image
+              src="/people/arthurpalmer.png"
+              alt="Sergeant Arthur Palmer"
+              fill
+              className="object-cover grayscale"
+            />
+          </div>
+
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
+              ARTHUR PALMER
+            </h2>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                Arthur George Palmer was a proud sergeant in World War 2. He was born in England and came to Canada as a boy and lived on Clendenan ave. He was killed in Italy on January 13 in 1944.
+              </p>
+              <p className="mb-6">
+                He had a family and was a son to Mr. and Mrs. Alfred John Palmer. He also had a wife Elvira E. M. Palmer. He fought in the 1st division and his service number was B/11618. He was also buried in Italy in the Cassino War Cemetery.
+              </p>
+              <p className="font-medium text-black">
+                He was only 29 years old when he was shot down and we thank him for his service.
+              </p>
+            </div>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            05
+          </div>
+        </div>
+
+        {/* Gordon Harrison */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
+            <Image
+              src="/people/gordonharrison.png"
+              alt="Warrant Officer Gordon Harrison"
+              fill
+              className="object-cover grayscale"
+            />
+          </div>
+
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
+              GORDON HARRISON
+            </h2>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                Gordon Fletcher Harrison was a Warrant Officer at the time of his death. His date of death was August 6, 1944.
+              </p>
+              <p className="mb-6">
+                His service number was R/112810.
+              </p>
+              <p className="font-medium text-black">
+                Rest in peace, Mr. Harrison.
+              </p>
+            </div>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            06
+          </div>
+        </div>
+
+        {/* Charles McMullen */}
+        <div className="relative h-screen w-screen flex-shrink-0 flex items-center justify-between px-20 py-16 bg-white">
+          {/* Image on left */}
+          <div className="relative w-[35vw] h-[80vh]">
+            <Image
+              src="/people/charlesmcmullen.png"
+              alt="Bombardier Charles McMullen"
+              fill
+              className="object-cover grayscale"
+            />
+          </div>
+
+          {/* Content on right */}
+          <div className="w-[45vw] flex flex-col justify-center space-y-8">
+            <h2 className="text-6xl font-black tracking-tight">
+              CHARLES McMULLEN
+            </h2>
+            <div className="text-xl leading-relaxed text-gray-700">
+              <p className="mb-6">
+                In World War 1 Charles Henry Fox was a bombardier. He was born on October 17th of 1892, and he passed away on April 30th or 1916. He was 21 years old when he died and was buried in 'RENINGHELST NEW MILITARY CEMETERY' in Belgium.
+              </p>
+              <p className="mb-6">
+                He was the son of widowed Elizabeth Ann Fox and a brother to Harold and Charles and lived on Clendenan Ave.
+              </p>
+              <p className="font-medium text-black">
+                May he rest in peace.
+              </p>
+            </div>
+          </div>
+
+          {/* Large number in bottom right */}
+          <div className="absolute bottom-12 right-20 text-[20rem] font-black text-gray-200 leading-none pointer-events-none">
+            07
           </div>
         </div>
       </div>
