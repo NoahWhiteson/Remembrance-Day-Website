@@ -36,7 +36,7 @@ Whether you’re a student, developer, or history enthusiast, this website offer
 
 ## ⚡ Live Demo
 
-Check out the live project here: [Remembrance Day Website](https://yourwebsiteurl.com)  
+Check out the live project here: [Remembrance Day Website](https://remembrance.noahwhiteson.com/)  
 
 ---
 
@@ -44,4 +44,4 @@ Check out the live project here: [Remembrance Day Website](https://yourwebsiteur
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/yourusername/remembrance-day-website.git
+   git clone https://github.com/NoahWhiteson/Remembrance-Day-Website.git
